@@ -4,8 +4,7 @@ import flet as ft
 def main(page:ft.Page):
     page.vertical_alignment=ft.MainAxisAlignment.CENTER
     page.horizontal_alignment= ft.CrossAxisAlignment.CENTER
-    page.add(
-        ft.Row(
+    hero_section= ft.Row(
             [
                 ft.Column(
                     controls=[
@@ -173,6 +172,12 @@ def main(page:ft.Page):
             ],
             alignment=ft.MainAxisAlignment.CENTER
         )
+    
+    page.add(hero_section)
+    feature_section= ft.Container(
+        
     )
+    page.add(feature_section)
+        
 
 ft.app(main)
