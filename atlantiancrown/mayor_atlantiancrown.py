@@ -8,7 +8,7 @@ def main(page:ft.Page):
        
     page.add(hero_section)
     feature_section= ft.Container(
-        
+
     )
     page.add(feature_section)
         
