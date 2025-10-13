@@ -1,62 +1,64 @@
 import flet as ft
 
-
 feature_section= ft.Container(
-    content= ft.Row(
+    content= ft.Column(
         [
-            ft.Column(
-                controls=[
-                    ft.Row(height=50),
-                    ft.Text(
-                        'Powerful Features For Modern DeFi',size=65, weight=ft.FontWeight.BOLD
+            ft.Row(
+                [
+                    ft.Container(
+                        bgcolor='white',
+                        height=250,
+                        width=350,
+                        # border=ft.Border.all(1, 'black')
+                        padding=20,
+
+                        border_radius=20,
+                        content=ft.Column(
+                            [
+                                ft.Icon(ft.Icons.SECURITY, size=50, color='black'),
+                                ft.Text('Secure Wallet', size=30, weight=ft.FontWeight.BOLD, color='black'),
+                                ft.Text('Protect your digital assets with our state-of-the-art security features,\n including multi-signature support')
+                            ],
+                            
+                        ),
+
                     ),
-                    ft.Text(
-                        'Everything you need to navigate the decentralized finance ecosystem\n with confidence and ease',
-                        text_align=ft.TextAlign.CENTER,
-                        size=25,
-                        weight=ft.FontWeight.W_600,
-                        color='grey',
+                    ft.Container(
+                        bgcolor='white',
+                        height=250,
+                        width=350
+
+                        
                     ),
-                    ft.OutlinedButton(
-                                    'Token Management\n Seamlessly manage your digital assests with advanced potfolio\n tracking and analytic',
-                                    
-                                    style=ft.ButtonStyle(
-                                        text_style=ft.TextStyle(
-                                            size=20,
-                                            weight=ft.FontWeight.W_400
-                                        ),
-                                        padding=ft.Padding(left=30,top=20,right=30,bottom=20),
-                                        shape=ft.RoundedRectangleBorder(radius=10),
-                                        
-
-
-                                    )
-
-                                    ),
-                    ft.OutlinedButton(
-                                    'Stacking resources  \n Earn passive income by stacking your tokens with competitive APY\n rates.',
-                                    
-                                    style=ft.ButtonStyle(
-                                        text_style=ft.TextStyle(
-                                            size=20,
-                                            weight=ft.FontWeight.W_400
-                                        ),
-                                        padding=ft.Padding(left=30,top=20,right=30,bottom=20),
-                                        shape=ft.RoundedRectangleBorder(radius=10),
-                                        
-
-
-                                    )
-
-                                    ),
-
+                    ft.Container(
+                        bgcolor='white',
+                        height=250,
+                        width=350
+                        
+                    ),
+                    
                 ],
-                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+                run_alignment=ft.MainAxisAlignment.SPACE_EVENLY,
                 alignment=ft.MainAxisAlignment.CENTER,
+                spacing=50,
+            ),
+            ft.Row(
+                [
+                    ft.Container(
+                        bgcolor='green',
+                        width=100,
+                        height=100,
+
+
+                    )
+                ]
             ),
 
         ],
+        col=2,
+        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         alignment=ft.MainAxisAlignment.CENTER,
+
     ),
     bgcolor='#040A10'
 )
