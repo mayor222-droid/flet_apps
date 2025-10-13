@@ -1,103 +1,14 @@
 
 import flet as ft
-
+from .components_2.hero import hero_section
+from .components_2.feature import feature_section
 def main(page:ft.Page):
     page.vertical_alignment=ft.MainAxisAlignment.CENTER
-    page.horizontal_alignment=ft.CrossAxisAlignment.CENTER
-    page.add(
-        ft.Row(
-            [
-                ft.Column(
-                    controls=[
-                        ft.Text('Discover Atlantian Crown',size=70,weight=ft.FontWeight.BOLD, ),
-                        ft.Text(
-                            spans=[
-                                ft.TextSpan('currency '),
-                                ft.TextSpan('(ATC)',style=ft.TextStyle(color='blue',)),
-                                ft.TextSpan(': The'),
-                            ],
-                            size=70,
-                            weight='bold',
-                        ),
-                        ft.Text(
-                            spans=[
-                                ft.TextSpan(
-                                    text=' future of '
-
-                                ),
-                                ft.TextSpan(
-                                    text='Digital Currency',
-                                    style=ft.TextStyle(color='blue')
-                                ),
-
-                            ],
-                            size=70,
-                            weight='bold'
-                        ),
-                        ft.Row(height=80),
-                        ft.Text(
-                            'Experience secure transactions, real-time rate, and a user focused platform with Atlantian \n Crown (ATC).Join the UKA Decentralized E-currency revolution today.',
-                            text_align=ft.TextAlign.CENTER,
-                            size=20.5,
-                            weight=ft.FontWeight.W_400,
-                            color='grey'
-                        ),
-                        ft.Row(height=60,), # to bring the btn rows down
-                        ########################## buttons ##################
-                        ft.Row(
-                            controls=[
-
-                                ft.Button(
-                                    content=ft.Row(
-                                        [
-                                            ft.Text(
-                                                'Register',
-                                            ),
-                                            ft.Icon(
-                                                name=ft.Icons.ARROW_FORWARD,
-                                            )
-                                        ],
-                                        alignment=ft.MainAxisAlignment.CENTER
-                                    ),
-                                    style=ft.ButtonStyle(
-                                        shape=ft.RoundedRectangleBorder(radius=15),
-                                        text_style=ft.TextStyle(
-                                            size=10,
-                                            weight='bold'
-
-                                        ),
-                                        padding=ft.Padding(left=30,top=25,right=32,bottom=20),
-                                        bgcolor=ft.Colors.BLUE_800,
-                                    )
-                                ),
-                                ft.OutlinedButton(
-                                    'login',
-                                    style=ft.ButtonStyle(
-                                        text_style=ft.TextStyle(
-                                            size=20,
-                                            weight=ft.FontWeight.W_100
-                                        ),
-                                        padding=ft.Padding(left=40,top=50,right=40,bottom=35),
-                                        shape=ft.RoundedRectangleBorder(radius=10),
-                                        side=ft.BorderSide(width=3,color='blue' ) #border styling
-                                    ),
-                        
-
-                                ),
-                            ]
-                        )
-                    ],
-
-                    horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-                    alignment=ft.MainAxisAlignment.CENTER,
-                    spacing= -30
+    page.horizontal_alignment=ft.MainAxisAlignment.CENTER
 
 
-                    
-                ),
-            ],
-            # vertical_alignment=ft.mainAxisalignment.CENTER,
-            alignment=ft.MainAxisAlignment.CENTER
-        )
-    )
-ft.app(main)    
+    page.add(hero_section)
+
+    page.add(feature_section)
+
+ft.app(main)
