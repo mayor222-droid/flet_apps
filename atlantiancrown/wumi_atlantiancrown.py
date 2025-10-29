@@ -2,7 +2,7 @@
 import flet as ft
 from .components_2.hero import hero_section
 from .components_2.feature import feature_section
-from .components.__init__ import __init__section
+from .components.get_in_touch import get_in_touch_section
 def main(page:ft.Page):
     page.vertical_alignment=ft.MainAxisAlignment.CENTER
     page.horizontal_alignment=ft.MainAxisAlignment.CENTER
@@ -11,7 +11,7 @@ def main(page:ft.Page):
         controls=[
             hero_section,
             feature_section,
-            __init__section
+            get_in_touch_section
             
         ],
         alignment=ft.MainAxisAlignment.CENTER,
